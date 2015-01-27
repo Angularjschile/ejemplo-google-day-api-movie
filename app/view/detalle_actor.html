@@ -1,0 +1,35 @@
+<h2>{{actor.name}}</h2>
+<div layout="row" layout-wrap layout-sm="column">
+    <div flex>
+        <img src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}"
+             style="margin-left:20px;width: 250px">
+    </div>
+    <div flex>
+        <p>
+            {{actor.biography}}
+        </p>
+    </div>
+    <div flex>
+        <md-content style="height: 300px;">
+            <md-list>
+                <md-item ng-repeat="item in actor.images.profiles">
+                    <md-item-content>
+
+                        <div class="md-tile-content">
+                            <img ng-src="http://image.tmdb.org/t/p/w500{{item.file_path}}"
+                                 alt="{{item.who}}" style="width: 250px">
+                        </div>
+                    </md-item-content>
+                </md-item>
+            </md-list>
+        </md-content>
+    </div>
+
+</div>
+
+
+<div flex>
+    <p ng-repeat = "item in actor.trailers.youtube" style="margin-left: 20px">
+        <youtube-video video-id="item.source"></youtube-video>
+    </p>
+</div>

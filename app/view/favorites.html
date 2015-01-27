@@ -1,0 +1,39 @@
+<h1>{{movies.length}} Peliculas Favoritas</h1>
+<div layout="row" layout-align="end start">
+
+    <md-input-container>
+        <label>Buscar</label>
+        <input ng-model="buscar" type="text">
+
+    </md-input-container>
+
+</div>
+<md-list>
+    <md-item ng-repeat="item in movies|filter:buscar" class="repeated-item" ng-if="item.poster_path!='' && item.poster_path!=null ">
+        <md-item-content>
+
+
+            <div class="md-tile-left">
+                <img src="http://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}" class="imdb">
+            </div>
+
+            <div class="md-tile-content">
+
+
+                <a href="#/detalle/{{item.id}}/{{item.title}}"><h3> {{item.title}} </h3></a>
+
+
+                <p>
+                    Rating {{item.vote_average}}
+                </p>
+
+            </div>
+
+            <md-button ng-click="showConfirm($event,$index)" class="md-raised md-fab ">
+                <ng-md-icon icon="{{item.icon}}" size="32"></ng-md-icon>
+            </md-button>
+
+
+        </md-item-content>
+    </md-item>
+</md-list>
