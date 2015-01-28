@@ -22,13 +22,22 @@
 </head>
 
 <body >
-
+<div class="logo-angular-chile">
+    <img alt="" src="img/logo.png">
+    <img alt="" src="img/GDG-program-logo.png">
+</div>
 <md-toolbar md-scroll-shrink>
     <div class="md-toolbar-tools">
         <h3>
             <span>Angularjs Chile</span>
         </h3>
         <span flex></span>
+        <md-input-container>
+
+
+            <input ng-model="buscar" type="text" ng-model-options="{ debounce: 500 }" placeholder="Buscar">
+        </md-input-container>
+
         <md-button class="  " href="#/" aria-label="refresh">
             <md-tooltip>
                 Buscar

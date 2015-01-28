@@ -10,7 +10,10 @@
 
 
 angular.module('app',['ngRoute','LocalStorageModule','ngMaterial','ngMdIcons','ngResource','youtube-embed'])
-    .config(function($routeProvider) {
+    .config(function($routeProvider,$mdThemingProvider) {
+        $mdThemingProvider.theme('default')
+            .primaryColor('red')
+            .accentColor('orange');
         $routeProvider
             .when('/', {
                 controller:'searchCtrl',

@@ -16,7 +16,8 @@ angular.module('app')
         return $resource(url, { api_key: apikey,append_to_response: 'casts,trailers,images,similar_movie'},
             {
                 'getMovies': { method:'get',isArray:false },
-                'getGenre': { method:'get',isArray:false ,url:'http://api.themoviedb.org/3/genre/:type/:id'}
+                'getGenre': { method:'get',isArray:false ,url:'http://api.themoviedb.org/3/genre/:type/:id'},
+                'getPersonMovies': { method:'get',isArray:false ,url:'http://api.themoviedb.org/3/person/:id/movie_credits'}
             });
 });
 

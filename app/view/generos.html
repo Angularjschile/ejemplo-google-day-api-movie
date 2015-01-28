@@ -1,5 +1,6 @@
 <md-list>
-    <md-item ng-repeat="item in movies">
+    <md-item ng-repeat="item in movies|filter:buscar">
+        <md-whiteframe class="md-whiteframe-z5 md-whiteframe" layout >
         <md-item-content>
 
             <div class="md-tile-content">
@@ -7,5 +8,6 @@
 
             </div>
         </md-item-content>
+        </md-whiteframe>
     </md-item>
 </md-list>

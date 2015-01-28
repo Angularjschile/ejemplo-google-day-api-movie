@@ -10,9 +10,9 @@
 
 
 angular.module('app')
-    .controller('favoritesCtrl', function ($mdDialog, $scope, localStorageService, $routeParams, $mdToast, $location, $rootScope) {
+    .controller('favoritesCtrl', function ($rootScope,$mdDialog, $scope, localStorageService, $routeParams, $mdToast, $location, $rootScope) {
         $rootScope.icon = 'reply';
-
+        $rootScope.buscar='';
 
         $scope.movies = localStorageService.get('favorites');
         for (var i = 0; i < $scope.movies.length; i++) {
@@ -21,7 +21,7 @@ angular.module('app')
         $scope.showConfirm = function (ev, index) {
             var confirm = $mdDialog.confirm()
                 .title('Eliminar')
-                .content('Esta Seguro de Eliminar este registro?')
+                .content('Esta Seguro de eliminar esta pelicula?')
 
                 .ok('Si')
                 .cancel('No')

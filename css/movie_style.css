@@ -67,3 +67,20 @@ class
     from { opacity:1; }
     to { opacity:0; }
 }
+.md-whiteframe {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+}
+
+.logo-angular-chile {
+    background-color: rgb(244, 67, 54);
+    bottom: 0;
+    margin: -10px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+.logo-angular-chile img {
+    width: 132px;
+}

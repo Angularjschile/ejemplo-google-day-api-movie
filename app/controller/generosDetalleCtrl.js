@@ -12,6 +12,7 @@
 angular.module('app')
     .controller('generosDetalleCtrl', function($rootScope,$scope,movieService,$routeParams,localStorageService,$timeout){
         $scope.tipo='Peliculas Categoria '+$routeParams.nombre;
+        $rootScope.buscar='';
         $scope.generos= function () {
             $scope.load = true;
             movieService.getGenre({query: $scope.buscar,type:$routeParams.id,id:'movies'}).$promise.then(function (data) {

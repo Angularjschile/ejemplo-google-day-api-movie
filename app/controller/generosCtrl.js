@@ -14,7 +14,7 @@ angular.module('app')
 
         $scope.generos= function () {
             $scope.load = true;
-            movieService.getGenre({query: $scope.buscar,type:'movie',id:'list'}).$promise.then(function (data) {
+            movieService.getGenre({ type:'movie',id:'list'}).$promise.then(function (data) {
                 $scope.movies = data.genres
                 for (var i = 0; i < $scope.movies.length; i++) {
                     $scope.movies[i].icon = 'favorite'
