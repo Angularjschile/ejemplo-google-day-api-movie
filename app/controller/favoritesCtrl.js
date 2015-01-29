@@ -16,6 +16,9 @@ angular.module('app')
         $rootScope.buscar='';
 
         $scope.movies = localStorageService.get('favorites');
+        if ($scope.movies == null) {
+            $scope.movies = [];
+        }
         for (var i = 0; i < $scope.movies.length; i++) {
             $scope.movies[i].icon = 'remove'
         }
