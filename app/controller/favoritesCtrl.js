@@ -10,7 +10,8 @@
 
 
 angular.module('app')
-    .controller('favoritesCtrl', function ($rootScope,$mdDialog, $scope, localStorageService, $routeParams, $mdToast, $location, $rootScope) {
+    .controller('favoritesCtrl', function ( $rootScope,$mdDialog, $scope, localStorageService, $stateParams, $mdToast, $location, $rootScope) {
+
         $rootScope.icon = 'reply';
         $rootScope.buscar='';
 

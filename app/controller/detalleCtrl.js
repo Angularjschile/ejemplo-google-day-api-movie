@@ -10,8 +10,9 @@
 
 
 angular.module('app')
-    .controller('detalleCtrl', function($scope,movieService,$routeParams){
-        movieService.get({type:'movie',id:$routeParams.id}).$promise.then(function(response){
+    .controller('detalleCtrl', function($scope,movieService,$stateParams, $rootScope){
+
+        movieService.get({type:'movie',id:$stateParams.id}).$promise.then(function(response){
             $scope.movie=response;
         })
 

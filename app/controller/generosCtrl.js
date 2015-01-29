@@ -10,7 +10,8 @@
 
 
 angular.module('app')
-    .controller('generosCtrl', function($rootScope,$scope,movieService,$routeParams,localStorageService,$timeout){
+    .controller('generosCtrl', function($rootScope,$scope,movieService,$stateParams,localStorageService,$timeout){
+
         $rootScope.buscar='';
         $scope.generos= function () {
             $scope.load = true;

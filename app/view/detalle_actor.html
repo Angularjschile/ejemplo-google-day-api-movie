@@ -1,5 +1,11 @@
+
 <h2>{{actor.name}}</h2>
 <div layout="row" layout-wrap layout-sm="column">
+
+    <md-whiteframe class="md-whiteframe-z5 md-whiteframe" layout >
+
+
+
     <div flex="50">
         <img src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}"
              style="margin-left:20px;width: 250px">
@@ -9,6 +15,11 @@
             {{actor.biography}}
         </p>
     </div>
+
+
+
+</md-whiteframe>
+
     <div flex="100" >
         <md-content style="height: 400px;" layout="column">
             <md-list>
@@ -24,7 +35,6 @@
             </md-list>
         </md-content>
     </div>
-
 
 
     <div flex="100" >

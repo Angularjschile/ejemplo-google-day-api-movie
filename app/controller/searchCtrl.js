@@ -10,7 +10,8 @@
 
 
 angular.module('app')
-    .controller('searchCtrl', function ($mdSidenav, $rootScope, $scope, localStorageService, $mdToast, $mdDialog, $rootScope, $location, movieService, $timeout) {
+    .controller('searchCtrl', function (  $rootScope, $scope, localStorageService, $mdToast, $mdDialog, $rootScope, $location, movieService, $timeout) {
+
 
         $rootScope.icon = 'favorite';
 

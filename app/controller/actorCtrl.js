@@ -10,12 +10,13 @@
 
 
 angular.module('app')
-    .controller('actorCtrl', function($rootScope,$scope,movieService,$routeParams,localStorageService,$timeout){
+    .controller('actorCtrl', function( $rootScope,$scope,movieService,$stateParams,localStorageService,$timeout){
+
         $rootScope.buscar='';
-        movieService.get({type:'person',id:$routeParams.id}).$promise.then(function(response){
+        movieService.get({type:'person',id:$stateParams.id}).$promise.then(function(response){
             $scope.actor=response;
         })
-        movieService.getPersonMovies({id:$routeParams.id}).$promise.then(function(response){
+        movieService.getPersonMovies({id:$stateParams.id}).$promise.then(function(response){
             $scope.movies=response.cast;
             for (var i = 0; i < $scope.movies.length; i++) {
                 $scope.movies[i].icon = 'favorite'
