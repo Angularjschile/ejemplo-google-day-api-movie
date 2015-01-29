@@ -15,12 +15,12 @@ angular.module('app')
         $rootScope.icon = 'reply';
         $rootScope.buscar='';
 
-        $scope.movies = localStorageService.get('favorites');
-        if ($scope.movies == null) {
-            $scope.movies = [];
+        $rootScope.favorites = localStorageService.get('favorites');
+        if ($rootScope.favorites == null) {
+            $rootScope.favorites = [];
         }
-        for (var i = 0; i < $scope.movies.length; i++) {
-            $scope.movies[i].icon = 'remove'
+        for (var i = 0; i < $rootScope.favorites.length; i++) {
+            $scope.favorites[i].icon = 'remove'
         }
         $scope.showConfirm = function (ev, index) {
             var confirm = $mdDialog.confirm()
@@ -40,8 +40,8 @@ angular.module('app')
 
         $scope.eliminar = function (index) {
 
-            $scope.movies.splice(index, 1)
-            localStorageService.set('favorites', $scope.movies);
+            $scope.favorites.splice(index, 1)
+            localStorageService.set('favorites', $scope.favorites);
             $mdToast.show(
                 $mdToast.simple()
                     .content('Registro Eliminado')

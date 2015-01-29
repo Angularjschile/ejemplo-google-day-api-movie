@@ -9,7 +9,7 @@
  * */
 
 
-angular.module('app',['ngRoute','LocalStorageModule','ngMaterial','ngMdIcons','ngResource','youtube-embed','ui.router'])
+angular.module('app',['ngRoute','LocalStorageModule','ngMaterial','ngMdIcons','ngResource','youtube-embed','ui.router','sliderApp'])
     .config(function($routeProvider,$stateProvider,$mdThemingProvider,$urlRouterProvider) {
         $mdThemingProvider.theme('default')
             .primaryColor('red')

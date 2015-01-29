@@ -10,7 +10,7 @@
 
 
 angular.module('app')
-    .controller('menuCtrl', function($scope,$mdSidenav,$rootScope){
+    .controller('menuCtrl', function($scope,$mdSidenav ,$rootScope){
         $rootScope.buscar='';
 
         $scope.toogleMenu=function(){

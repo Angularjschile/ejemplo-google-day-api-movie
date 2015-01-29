@@ -26,15 +26,15 @@ angular.module('app')
             })
         }
         $scope.search();
-        $scope.favorites = localStorageService.get('favorites');
-        if ($scope.favorites == null) {
-            $scope.favorites = [];
+        $rootScope.favorites = localStorageService.get('favorites');
+        if ($rootScope.favorites == null) {
+            $rootScope.favorites = [];
         }
         $scope.addFavorite = function (item, index) {
             $rootScope.icon = 'exposure_plus_1';
             $scope.movies[index].icon = 'check';
-            $scope.favorites.push(item);
-            localStorageService.set('favorites', $scope.favorites);
+            $rootScope.favorites.push(item);
+            localStorageService.set('favorites', $rootScope.favorites);
             $timeout(function () {
                 $rootScope.icon = 'favorite';
             }, 1000)
