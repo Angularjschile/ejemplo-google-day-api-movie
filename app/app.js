@@ -49,7 +49,7 @@ angular.module('app',['ngRoute','LocalStorageModule','ngMaterial','ngMdIcons','n
                 }
             })
             .state('app.movies_type', {
-                url: "movies/:tipo",
+                url: "movies/:tipo/:nombre",
                 views: {
                     "app": {
                         controller:'popularCtrl',

@@ -13,10 +13,10 @@ angular.module('app')
     .controller('popularCtrl', function( $rootScope,$scope,movieService,$stateParams,localStorageService,$timeout){
 
         $rootScope.buscar='';
-        $scope.tipo=$stateParams.tipo;
+        $scope.tipo=$stateParams.nombre;
         $scope.search = function () {
             $scope.load = true;
-            movieService.getMovies({query: $rootScope.buscar,type:'movie',id:$scope.tipo}).$promise.then(function (data) {
+            movieService.getMovies({query: $rootScope.buscar,type:'movie',id:$stateParams.tipo}).$promise.then(function (data) {
                 $scope.movies = data.results
                 for (var i = 0; i < $scope.movies.length; i++) {
                     $scope.movies[i].icon = 'favorite'
