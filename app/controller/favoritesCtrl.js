@@ -28,7 +28,7 @@ angular.module('app')
             $rootScope.favorites = [];
         }
         for (var i = 0; i < $rootScope.favorites.length; i++) {
-            $scope.favorites[i].icon = 'remove'
+            $rootScope.favorites[i].icon = 'remove'
         }
         $scope.showConfirm = function (ev, favorite) {
             var confirm = $mdDialog.confirm()

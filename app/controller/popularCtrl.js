@@ -39,6 +39,7 @@ angular.module('app')
         $scope.addFavorite = function (item, index) {
             $rootScope.icon = 'exposure_plus_1';
             $scope.movies[index].icon = 'check';
+            item.icon='remove';
             $rootScope.favorites.$add(item);
 
             $timeout(function () {
